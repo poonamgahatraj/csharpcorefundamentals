@@ -14,9 +14,15 @@ namespace csharp_fundamentals
 
             // cp.CheckEvenOdd();
 
-            cp.StudentReport();
+            // cp.StudentReport();
+            LoopProblem lp = new LoopProblem();
+            //   lp.WhileLoop();
 
+            //lp.ForLoop();
+            //  lp.MultiplesOfThree();
+            // lp.UserInputWhileLoop();
+            lp.IncrementInFour();
 
-        }
+        }   
     }
 }
