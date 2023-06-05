@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using csharp_fundamentals.fundamentals;
+using System;
 
 namespace csharp_fundamentals
 {
@@ -6,7 +8,15 @@ namespace csharp_fundamentals
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           // Console.WriteLine("Hello World!");
+            ConditionalProblem cp= new ConditionalProblem();
+            // cp.ReadUserName();
+
+            // cp.CheckEvenOdd();
+
+            cp.StudentReport();
+
+
         }
     }
 }
