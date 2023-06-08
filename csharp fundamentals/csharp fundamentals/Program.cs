@@ -1,6 +1,7 @@
 ﻿
 using csharp_fundamentals.fundamentals;
 using System;
+using System.ComponentModel;
 
 namespace csharp_fundamentals
 {
@@ -15,14 +16,19 @@ namespace csharp_fundamentals
             // cp.CheckEvenOdd();
 
             // cp.StudentReport();
-            LoopProblem lp = new LoopProblem();
+             LoopProblem lp = new LoopProblem();
             //   lp.WhileLoop();
 
             //lp.ForLoop();
             //  lp.MultiplesOfThree();
             // lp.UserInputWhileLoop();
-            lp.IncrementInFour();
-
+            // lp.IncrementInFour();
+            // lp.SumOfNaturalNumber();
+            // lp.CubeofNaturalNumbers();
+            //lp.NestedIfLoop(); 
+            // lp.IfLoop();
+            lp.ArraysAndList();
+                
         }   
     }
 }
