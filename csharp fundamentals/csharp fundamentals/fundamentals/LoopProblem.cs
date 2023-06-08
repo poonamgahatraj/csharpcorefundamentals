@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace csharp_fundamentals.fundamentals
@@ -152,29 +153,26 @@ namespace csharp_fundamentals.fundamentals
             {
 
             }
-
-        }
-
-        
-
-
-
-
-
         }
 
 
+        public void Array()
+        {
+            string[] color = { "red", "green", "blue" };
+            {
+               // Console.WriteLine(color[0]);
+                for (int i = 0; i < color.Length; i++)
+                {
+                    Console.WriteLine(color[i]);
+                }
+            }
+
+        }
+
+    }
 
 
 
-
-
-
-
-
-
-
- 
 }
 
 

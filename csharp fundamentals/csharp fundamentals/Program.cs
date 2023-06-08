@@ -27,7 +27,8 @@ namespace csharp_fundamentals
             // lp.CubeofNaturalNumbers();
             //lp.NestedIfLoop(); 
             // lp.IfLoop();
-            lp.ArraysAndList();
+            //lp.ArraysAndList();
+            lp.Array();
                 
         }   
     }
