@@ -30,7 +30,10 @@ namespace csharp_fundamentals
             //lp.ArraysAndList();
             // lp.Array();
             //lp.marks();
-            lp.SumOfAllElement();
+            //lp.SumOfAllElement();
+            // lp.Integers();
+            // lp.Data();
+            lp.UserInput();
         }   
     }
 }

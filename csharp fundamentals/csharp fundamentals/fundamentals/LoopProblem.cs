@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace csharp_fundamentals.fundamentals
@@ -160,14 +161,14 @@ namespace csharp_fundamentals.fundamentals
         {
             string[] color = { "red", "green", "blue" };
             {
-               // Console.WriteLine(color[0]);
+                // Console.WriteLine(color[0]);
                 for (int i = 0; i < color.Length; i++)
                 {
                     Console.WriteLine(color[i]);
                 }
             }
 
-            
+
         }
 
         public void marks()
@@ -188,21 +189,90 @@ namespace csharp_fundamentals.fundamentals
         public void SumOfAllElement()
         {
             int[] a = new int[4] { 2, 4, 6, 5 };
-            int i,  sum = 0;
+            int i, sum = 0;
             {
-                for (i=0; i<4;i++)
+                for (i = 0; i < 4; i++)
                 {
                     sum += a[i];
 
                 }
                 Console.WriteLine("sum of all elements is " + sum);
+
             }
+
+
+        }
+        public void Integers()
+        {
+            int[] a = new int[6] { 1, 1, 2, 3, 4, 5 };
+            int i;
+            {
+                for (i = 0; i < 7; i++)
+                { Console.WriteLine(i); }
+
+            }
+
+        }
+        public void Data()
+        {
+            List<int> data = new List<int>();
+            data.Add(8);
+            data.Add(21);
+            data.Add(33);
+            data.Add(24);
+            data.Add(45);
+
+            for (int i = 0; i < data.Count; i++)
+
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(data[i]);
+                }
+
+            }
+
+        
+
+        }
+        public void UserInput()
+        {
+            List<int> data = new List<int>();
+            data.Add(2);
+            data.Add(4);
+            data.Add(6);
+            data.Add(8);
+            data.Add(10);
+            int isfound = 0;
+
+            int num = Convert.ToInt32(Console.ReadLine());
+         
+
+            for (int i = 0; i < data.Count; i++)
+             
+                
+                if (data[i] == num  )
+                    
+                {
+                    isfound = 1;
+                    Console.WriteLine("number is found at position" + i);
+                
+                }
+               
+                 if (isfound == 0)
+            {
+
+                Console.WriteLine("number is not found");
+            }
+
+            }
+
+
+
+
         }
     }
 
-
-
-}
 
 
       
