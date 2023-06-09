@@ -9,14 +9,14 @@ namespace csharp_fundamentals
     {
         static void Main(string[] args)
         {
-           // Console.WriteLine("Hello World!");
-            ConditionalProblem cp= new ConditionalProblem();
+            // Console.WriteLine("Hello World!");
+            ConditionalProblem cp = new ConditionalProblem();
             // cp.ReadUserName();
 
             // cp.CheckEvenOdd();
 
             // cp.StudentReport();
-             LoopProblem lp = new LoopProblem();
+            LoopProblem lp = new LoopProblem();
             //   lp.WhileLoop();
 
             //lp.ForLoop();
@@ -33,7 +33,10 @@ namespace csharp_fundamentals
             //lp.SumOfAllElement();
             // lp.Integers();
             // lp.Data();
-            lp.UserInput();
-        }   
+            // lp.UserInput();
+           // lp.EvenOdd();
+           lp.DivisibleByBoth();
+        }
+    
     }
 }

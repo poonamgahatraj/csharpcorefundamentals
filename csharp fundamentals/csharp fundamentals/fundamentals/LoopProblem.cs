@@ -232,7 +232,7 @@ namespace csharp_fundamentals.fundamentals
 
             }
 
-        
+
 
         }
         public void UserInput()
@@ -246,32 +246,98 @@ namespace csharp_fundamentals.fundamentals
             int isfound = 0;
 
             int num = Convert.ToInt32(Console.ReadLine());
-         
+            int pos = -1;
 
             for (int i = 0; i < data.Count; i++)
-             
-                
-                if (data[i] == num  )
-                    
+            {
+                if (data[i] == num)
+
                 {
                     isfound = 1;
-                    Console.WriteLine("number is found at position" + i);
-                
-                }
-               
-                 if (isfound == 0)
-            {
+                    pos = i;
+                    //Console.WriteLine("number is found at position"  + i);
+                    break;
 
+                }
+            }
+            if (isfound == 0)
+            {
                 Console.WriteLine("number is not found");
             }
+            if (isfound == 1)
+            {
+
+                Console.WriteLine("number is found at position " + pos);
+            }
+
+        }
+
+        public void EvenOdd()
+        {
+            List<int> data = new List<int>() { 24, 67, 89, 77, 65, 45, 342, 123455 };
+
+            List<int> even = new List<int>();
+
+
+            List<int> odd = new List<int>();
+
+
+
+            for (int i = 0; i < data.Count; i++)
+            {
+
+                if (data[i] % 2 == 0)
+                {
+                    even.Add(data[i]);
+                }
+
+                if (data[i] % 2 != 0)
+                {
+                    odd.Add(data[i]);
+
+                }
+            }
+
+            Console.WriteLine("even numbers:");
+
+            for (int i = 0; i < even.Count; i++)
+            {
+                Console.WriteLine(even[i]);
+            }
+
+            Console.WriteLine("Odd numbers:");
+
+            for (int i = 0; i < odd.Count; i++)
+            {
+                Console.WriteLine(odd[i]);
+            }
+
+        }
+
+
+        public void DivisibleByBoth()
+
+        {
+            List<int> data = new List<int>() { 24, 60, 89, 78, 70, 45, 342, 20 };
+           
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                if (data[i] % 2==0 && data[i] % 5 == 0)
+                
+                    {
+                    Console.WriteLine(data[i]);
+                
+                
+                }
 
             }
 
 
 
-
-        }
     }
+    }
+}
 
 
 
