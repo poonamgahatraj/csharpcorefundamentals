@@ -167,8 +167,37 @@ namespace csharp_fundamentals.fundamentals
                 }
             }
 
+            
         }
 
+        public void marks()
+        {
+            int[] marks = new int[3] { 10, 20, 30 };
+            {
+                //for (int i = 0; i < marks.Length; i++)
+                //{ Console.WriteLine(marks[i]);
+
+                //}
+                foreach (int mark in marks)
+                {
+                    Console.WriteLine(mark);
+                }
+            }
+
+        }
+        public void SumOfAllElement()
+        {
+            int[] a = new int[4] { 2, 4, 6, 5 };
+            int i,  sum = 0;
+            {
+                for (i=0; i<4;i++)
+                {
+                    sum += a[i];
+
+                }
+                Console.WriteLine("sum of all elements is " + sum);
+            }
+        }
     }
 
 

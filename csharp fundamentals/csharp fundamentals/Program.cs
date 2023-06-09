@@ -28,8 +28,9 @@ namespace csharp_fundamentals
             //lp.NestedIfLoop(); 
             // lp.IfLoop();
             //lp.ArraysAndList();
-            lp.Array();
-                
+            // lp.Array();
+            //lp.marks();
+            lp.SumOfAllElement();
         }   
     }
 }
