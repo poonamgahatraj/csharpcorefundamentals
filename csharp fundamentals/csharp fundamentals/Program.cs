@@ -34,8 +34,10 @@ namespace csharp_fundamentals
             // lp.Integers();
             // lp.Data();
             // lp.UserInput();
-           // lp.EvenOdd();
-           lp.DivisibleByBoth();
+            // lp.EvenOdd();
+            //lp.DivisibleByBoth();
+            //lp.ReverseOrder();
+            lp.SumOfAllElement();
         }
     
     }

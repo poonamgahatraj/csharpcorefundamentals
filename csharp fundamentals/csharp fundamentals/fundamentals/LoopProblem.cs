@@ -274,70 +274,99 @@ namespace csharp_fundamentals.fundamentals
 
         public void EvenOdd()
         {
-            List<int> data = new List<int>() { 24, 67, 89, 77, 65, 45, 342, 123455 };
-
-            List<int> even = new List<int>();
-
-
-            List<int> odd = new List<int>();
-
-
-
-            for (int i = 0; i < data.Count; i++)
             {
+                List<int> data = new List<int>() { 24, 67, 89, 77, 65, 45, 342, 123455 };
 
-                if (data[i] % 2 == 0)
+                List<int> even = new List<int>();
+
+
+                List<int> odd = new List<int>();
+
+
+
+                for (int i = 0; i < data.Count; i++)
                 {
-                    even.Add(data[i]);
+
+                    if (data[i] % 2 == 0)
+                    {
+                        even.Add(data[i]);
+                    }
+
+                    if (data[i] % 2 != 0)
+                    {
+                        odd.Add(data[i]);
+
+                    }
                 }
 
-                if (data[i] % 2 != 0)
+                Console.WriteLine("even numbers:");
+
+                for (int i = 0; i < even.Count; i++)
                 {
-                    odd.Add(data[i]);
-
+                    Console.WriteLine(even[i]);
                 }
-            }
 
-            Console.WriteLine("even numbers:");
+                Console.WriteLine("Odd numbers:");
 
-            for (int i = 0; i < even.Count; i++)
-            {
-                Console.WriteLine(even[i]);
-            }
+                for (int i = 0; i < odd.Count; i++)
+                {
+                    Console.WriteLine(odd[i]);
+                }
 
-            Console.WriteLine("Odd numbers:");
-
-            for (int i = 0; i < odd.Count; i++)
-            {
-                Console.WriteLine(odd[i]);
             }
 
         }
-
-
         public void DivisibleByBoth()
 
         {
             List<int> data = new List<int>() { 24, 60, 89, 78, 70, 45, 342, 20 };
-           
+
 
             for (int i = 0; i < data.Count; i++)
             {
-                if (data[i] % 2==0 && data[i] % 5 == 0)
-                
-                    {
+                if (data[i] % 2 == 0 && data[i] % 5 == 0)
+
+                {
                     Console.WriteLine(data[i]);
-                
-                
+
+
                 }
 
             }
 
+        }
+        public void ReverseOrder()
+        {
+            List<int> data = new List<int>() { 1, 2, 3, 4, 5 };
+
+            for (int i = 4; i <= 4; i--)
+            {
+
+                Console.WriteLine(data[i]);
+
+            }
+
+        }
+        public void SumOfElements()
+        {
+
+            List<int> data = new List<int>() { 1, 2, 3, 4, 5 };
+            int sum = 0;
+            for (int i = 0; i < 4; i++)
+                
+            {
+                sum+= data[i];
+            }
 
 
-    }
+
+        }
+
+
     }
 }
+
+
 
 
 
