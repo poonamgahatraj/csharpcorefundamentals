@@ -38,11 +38,26 @@ namespace csharp_fundamentals.fundamentals
 
         }
 
-        
-     
+        //no argument but return value
+        public int sum()
+        {
+            int num1 = 10;
+            int num2 = 20;
+            int result;
+            result = num1 + num2;
+            return result;
+        }
+
+        //argument but no return value
+
+        public void sum(int num1, int num2)
+        {
+            int result;
+            result = num1 + num2;
+            Console.WriteLine(result);
 
 
+        }
 
     }
-}
 

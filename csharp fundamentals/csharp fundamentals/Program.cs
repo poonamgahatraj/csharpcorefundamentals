@@ -42,9 +42,13 @@ namespace csharp_fundamentals
            //int max=fp.FindMax(5,7);
            // Console.WriteLine(max);
 
-            int output = fp.Output(1,2,3,4,5);
-            Console.WriteLine(output);
-
+            //int output = fp.Output(1,2,3,4,5);
+            //Console.WriteLine(output);
+            //int sum = fp.sum();
+            //Console.WriteLine(sum);
+            
+            int sum=fp.sum();
+            Console.WriteLine(sum);
 
         }
     
