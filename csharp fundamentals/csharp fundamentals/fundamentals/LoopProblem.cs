@@ -353,18 +353,19 @@ namespace csharp_fundamentals.fundamentals
             List<int> data = new List<int>() { 1, 2, 3, 4, 5 };
             int sum = 0;
             for (int i = 0; i < 4; i++)
-                
+
             {
-                sum+= data[i];
+                sum += data[i];
             }
 
 
 
         }
-
-
     }
 }
+       
+       
+    
 
 
 

@@ -16,7 +16,7 @@ namespace csharp_fundamentals
             // cp.CheckEvenOdd();
 
             // cp.StudentReport();
-            LoopProblem lp = new LoopProblem();
+          //  LoopProblem lp = new LoopProblem();
             //   lp.WhileLoop();
 
             //lp.ForLoop();
@@ -37,7 +37,15 @@ namespace csharp_fundamentals
             // lp.EvenOdd();
             //lp.DivisibleByBoth();
             //lp.ReverseOrder();
-            lp.SumOfAllElement();
+            // lp.SumOfAllElement();
+            FunctionProblem fp = new FunctionProblem();
+           //int max=fp.FindMax(5,7);
+           // Console.WriteLine(max);
+
+            int output = fp.Output(1,2,3,4,5);
+            Console.WriteLine(output);
+
+
         }
     
     }
