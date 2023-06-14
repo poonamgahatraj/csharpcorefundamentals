@@ -60,4 +60,19 @@ namespace csharp_fundamentals.fundamentals
         }
 
     }
+    public class StudentRecord
+    {
+        public int Average(string name, int age, int TotalSubject, int TotalMarks)
+        
+        {
+            
+            int avg;
+            avg = TotalMarks / TotalSubject;
+            return avg;
+        }
+        
+       
+    }
+}      
+       
 

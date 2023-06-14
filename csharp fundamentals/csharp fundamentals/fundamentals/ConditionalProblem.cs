@@ -6,11 +6,11 @@ namespace csharp_fundamentals.fundamentals
 {
     public class ConditionalProblem
     {
-        public void  ReadUserName()
+        public void ReadUserName()
         {
             string name;
             Console.WriteLine("enter your name");
-           name= Console.ReadLine();
+            name = Console.ReadLine();
             Console.WriteLine("your name is " + name);
         }
 
@@ -18,7 +18,7 @@ namespace csharp_fundamentals.fundamentals
         {
             int x;
             Console.WriteLine("enter a number");
-            x =int.Parse( Console.ReadLine());
+            x = int.Parse(Console.ReadLine());
 
             if (x % 2 == 0)
             {
@@ -30,10 +30,11 @@ namespace csharp_fundamentals.fundamentals
             }
         }
         public void StudentReport()
-        { string name;
+        {
+            string name;
             Console.WriteLine("enter your name");
             name = Console.ReadLine();
-            
+
             int x;
             Console.WriteLine("enter your class");
             x = int.Parse(Console.ReadLine());
@@ -51,12 +52,12 @@ namespace csharp_fundamentals.fundamentals
             a = float.Parse(Console.ReadLine());
 
             Console.WriteLine("***STUDENT PROFILE***");
-            Console.WriteLine("your name is" +name);
-            Console.WriteLine("your class is" +x);
-            Console.WriteLine("your age is" +y);
-            Console.WriteLine("your monthly fees is" +z);
-            Console.WriteLine("your height is" +a);
-            Console.WriteLine("your annual fees is"+ z*12);
+            Console.WriteLine("your name is" + name);
+            Console.WriteLine("your class is" + x);
+            Console.WriteLine("your age is" + y);
+            Console.WriteLine("your monthly fees is" + z);
+            Console.WriteLine("your height is" + a);
+            Console.WriteLine("your annual fees is" + z * 12);
 
 
 
@@ -67,5 +68,32 @@ namespace csharp_fundamentals.fundamentals
 
 
         }
+
+
+        public void PrimeNumber()
+        {   int i;
+            int x;
+            bool isprime = true;
+            Console.WriteLine("enter a number");
+            x = int.Parse(Console.ReadLine());
+            
+            for (i=2; i<x;i++)
+            if (x%i==0)
+            {
+                    Console.WriteLine("it is not a prime number");
+               isprime= false;
+              
+                   
+            }
+            if(isprime==true)
+            {
+                Console.WriteLine("it is prime number");
+
+            }
+
+
+        }
     }
 }
+
+
