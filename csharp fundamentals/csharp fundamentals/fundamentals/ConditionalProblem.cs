@@ -71,21 +71,22 @@ namespace csharp_fundamentals.fundamentals
 
 
         public void PrimeNumber()
-        {   int i;
+        {
+            int i;
             int x;
             bool isprime = true;
             Console.WriteLine("enter a number");
             x = int.Parse(Console.ReadLine());
-            
-            for (i=2; i<x;i++)
-            if (x%i==0)
-            {
+
+            for (i = 2; i < x; i++)
+                if (x % i == 0)
+                {
                     Console.WriteLine("it is not a prime number");
-               isprime= false;
-              
-                   
-            }
-            if(isprime==true)
+                    isprime = false;
+
+
+                }
+            if (isprime == true)
             {
                 Console.WriteLine("it is prime number");
 
@@ -93,7 +94,44 @@ namespace csharp_fundamentals.fundamentals
 
 
         }
+
+
+
+
+        public void VowelLetters()
+        {
+            int i;
+            bool hasvowel = true;
+            string name;
+            Console.WriteLine("Enter user name");
+            name = Console.ReadLine();
+            
+
+            for ( i = 0; i <= name.Length; i++)
+            {
+                if (name[i] != 'a'
+                || (name[i] != 'e')
+                || (name[i] != 'i')
+                || (name[i] != 'o')
+                || (name[i] != 'u'))
+                {
+                    
+                        Console.WriteLine("name do not have vowel");
+                        hasvowel = false; 
+
+                    
+                }
+            if (hasvowel==true)
+                {
+                    Console.WriteLine( " name  have vowel ");
+                    
+                }
+
+
+            }
+        }
     }
 }
+
 
 

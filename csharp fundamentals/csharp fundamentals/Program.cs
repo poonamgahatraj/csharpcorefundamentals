@@ -77,8 +77,9 @@ namespace csharp_fundamentals
             // cp.CheckEvenOdd();
 
             // cp.StudentReport();
-            cp.PrimeNumber();
-          //  LoopProblem lp = new LoopProblem();
+           // cp.PrimeNumber();
+            cp.VowelLetters();
+            //  LoopProblem lp = new LoopProblem();
             //   lp.WhileLoop();
 
             //lp.ForLoop();
@@ -99,24 +100,35 @@ namespace csharp_fundamentals
             // lp.EvenOdd();
             //lp.DivisibleByBoth();
             //lp.ReverseOrder();
-           // // lp.SumOfAllElement();
-           // FunctionProblem fp = new FunctionProblem();
-           ////int max=fp.FindMax(5,7);
-           //// Console.WriteLine(max);
+            // // lp.SumOfAllElement();
+            // FunctionProblem fp = new FunctionProblem();
+            ////int max=fp.FindMax(5,7);
+            //// Console.WriteLine(max);
 
-           // //int output = fp.Output(1,2,3,4,5);
-           // //Console.WriteLine(output);
-           // //int sum = fp.sum();
-           // //Console.WriteLine(sum);
-            
-           // //int sum=fp.sum();
-           // //Console.WriteLine(sum);
-           // StudentRecord Data= new StudentRecord();
-           // Data.Average("Adam", 12, 8, 480);
+            // //int output = fp.Output(1,2,3,4,5);
+            // //Console.WriteLine(output);
+            // //int sum = fp.sum();
+            // //Console.WriteLine(sum);
 
-           
-           // Console.WriteLine("Average marks of Adam is"   +  Data.Average ("Adam", 12, 8, 480));
-           
+            // //int sum=fp.sum();
+            // //Console.WriteLine(sum);
+            // StudentRecord Data= new StudentRecord();
+            // Data.Average("Adam", 12, 8, 480);
+
+
+            // Console.WriteLine("Average marks of Adam is"   +  Data.Average ("Adam", 12, 8, 480));
+
+           // int i;
+           // int[] num = { 1, 2, 3, 4, 2, 3, 4, 5, 5, 6, 7, 2, 8, 6, 8, 9, 2, 9, 10 };
+           // Console.WriteLine("Enter a number");
+           //num = Console.ReadLine();
+
+
+
+
+
+
+
         }
 
     }
