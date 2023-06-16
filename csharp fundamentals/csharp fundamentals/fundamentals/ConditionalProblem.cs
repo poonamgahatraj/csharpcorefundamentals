@@ -109,22 +109,23 @@ namespace csharp_fundamentals.fundamentals
 
             for ( i = 0; i <= name.Length; i++)
             {
-                if (name[i] != 'a'
-                || (name[i] != 'e')
-                || (name[i] != 'i')
-                || (name[i] != 'o')
-                || (name[i] != 'u'))
-                {
+                if (
+                   (name[i] == 'a')
+                || (name[i] == 'e')
+                || (name[i] == 'i')
+                || (name[i] == 'o')
+                || (name[i] == 'u')
+                )
+                { 
+                    hasvowel = false;
+                    Console.WriteLine("name do not have vowel");
                     
-                        Console.WriteLine("name do not have vowel");
-                        hasvowel = false; 
-
-                    
+            
                 }
             if (hasvowel==true)
                 {
                     Console.WriteLine( " name  have vowel ");
-                    
+                    break;
                 }
 
 

@@ -1,7 +1,9 @@
 ﻿
 using csharp_fundamentals.fundamentals;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 
 namespace csharp_fundamentals
 {
@@ -46,7 +48,7 @@ namespace csharp_fundamentals
 
 
             //int adam_average=adam.TotalMarks/adam.TotalSubject;
-            
+
 
 
 
@@ -71,14 +73,14 @@ namespace csharp_fundamentals
 
 
             // Console.WriteLine("Hello World!");
-            ConditionalProblem cp = new ConditionalProblem();
+            //ConditionalProblem cp = new ConditionalProblem();
             // cp.ReadUserName();
 
             // cp.CheckEvenOdd();
 
             // cp.StudentReport();
-           // cp.PrimeNumber();
-            cp.VowelLetters();
+            // cp.PrimeNumber();
+            //cp.VowelLetters();
             //  LoopProblem lp = new LoopProblem();
             //   lp.WhileLoop();
 
@@ -118,10 +120,68 @@ namespace csharp_fundamentals
 
             // Console.WriteLine("Average marks of Adam is"   +  Data.Average ("Adam", 12, 8, 480));
 
-           // int i;
-           // int[] num = { 1, 2, 3, 4, 2, 3, 4, 5, 5, 6, 7, 2, 8, 6, 8, 9, 2, 9, 10 };
-           // Console.WriteLine("Enter a number");
-           //num = Console.ReadLine();
+            //swaping value
+            int a = 10;
+            int b = 20;
+            int c = 10;
+
+            Console.WriteLine("the current value of a is " + a);
+            Console.WriteLine("the current value of b is " + b);
+
+            //after swaping value
+            c = a;
+            a = b;
+            b = c;
+
+            Console.WriteLine("the new value of a is " + a);
+            Console.WriteLine("the new value of b is " + b);
+
+           // first character of each name
+            int i;
+
+            List<string> name = new List<string>();
+            name.Add("adam");
+            name.Add("bob");
+            name.Add("colon");
+
+            for (i = 0; i <= 0; i++)
+            {
+                Console.WriteLine(name[0][0]);
+                Console.WriteLine(name[1][0]);
+                Console.WriteLine(name[2][0]);
+
+            }
+
+           // reverse order
+
+            int i;
+            List<int> num = new List<int>() { 1, 2, 3, 4, 5 };
+            for (i = num.Count - 1; i >= 0; i--)
+            {
+                Console.WriteLine(num[i]);
+            }
+
+            //Print odd index value
+            int i;
+
+            List<int> num= new List<int>() { 1,2,3,4,5,6};
+
+            for (i=0; i<=num.Count; i++)
+            if(i%2!=0)
+                {
+                    Console.WriteLine(i);
+                }
+
+
+
+            
+
+
+
+
+
+
+
 
 
 
