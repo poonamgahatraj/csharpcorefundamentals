@@ -13,76 +13,54 @@ namespace csharp_fundamentals
         static void
          Main(string[] args)
         {
-            List<List<int>> matrix = new List<List<int>>();
+            List<List<int>> matrixA = new List<List<int>>();
+            List<List<int>> matrixB = new List<List<int>>();
             List<int> row1 = new List<int> { 1, 2, 3 };
             List<int> row2 = new List<int> { 4, 5, 6 };
             List<int> row3 = new List<int> { 7, 8, 9 };
+            matrixA.Add(row1);
+            matrixA.Add(row2);
+            matrixA.Add(row3);
 
-            matrix.Add(row1);
-            matrix.Add(row2);
-            matrix.Add(row3);
+            List<int> Row1 = new List<int> { 10, 20, 30 };
+            List<int> Row2 = new List<int> { 40, 50, 60 };
+            List<int> Row3 = new List<int> { 70, 80, 90 };
+            matrixB.Add(Row1);
+            matrixB.Add(Row2);
+            matrixB.Add(Row3);
 
-            for (int i = 0; i < matrix.Count; i++)
+
+            for (int i = 0; i < matrixA.Count; i++)
             {
                 for (int j = 0; j < 3; j++)
-
-                    Console.Write(matrix[i][j]);
+                    Console.Write(matrixA[i][j]);
                 Console.WriteLine();
-
             }
             Console.WriteLine();
 
 
-            List<int> LeftDiagonal = new List<int>();
-            for (int i = 0; i <= 0; i++)
+            for (int i = 0; i < matrixB.Count; i++)
             {
-                Console.WriteLine(matrix[0][0]);
-                Console.WriteLine(matrix[1][1]);
-                Console.WriteLine(matrix[2][2]);
+                for (int j = 0; j < 3; j++)
+                    Console.Write(matrixB[i][j]);
+                Console.WriteLine();
             }
-            LeftDiagonal.Add(matrix[0][0]);
-            LeftDiagonal.Add(matrix[1][1]);
-            LeftDiagonal.Add(matrix[2][2]);
-
             Console.WriteLine();
 
 
-            List<int> RightDiagonal = new List<int>();
-            for (int i = 0; i <= 0; i++)
-            {
-                Console.WriteLine(matrix[0][2]);
-                Console.WriteLine(matrix[1][1]);
-                Console.WriteLine(matrix[2][0]);
-            }
-            RightDiagonal.Add(matrix[0][2]);
-            RightDiagonal.Add(matrix[1][1]);
-            RightDiagonal.Add(matrix[2][0]);
-
-            Console.WriteLine();
-
-
-            int sum1 = 0;
             for (int i = 0; i < 3; i++)
             {
-                sum1 = LeftDiagonal[i] + sum1;
-            }
-            Console.WriteLine(sum1);
-            Console.WriteLine();
+                List<int> matrixC = new List<int>();
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(matrixA[i][j] * matrixB[i][j]);
+                    Console.WriteLine();
+                    matrixC.Add(matrixA[i][j] * matrixB[i][j]);
 
-
-            int sum2 = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                sum2 = RightDiagonal[i] + sum2;
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine(sum2);
-            Console.WriteLine();
 
-            int sub = 0;
-            {
-                sub = sum1 - sum2;
-                Console.WriteLine(sub);
-            }
         }
     }
 }
