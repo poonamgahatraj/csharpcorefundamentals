@@ -13,54 +13,79 @@ namespace csharp_fundamentals
         static void
          Main(string[] args)
         {
-            List<List<int>> matrixA = new List<List<int>>();
-            List<List<int>> matrixB = new List<List<int>>();
-            List<int> row1 = new List<int> { 1, 2, 3 };
-            List<int> row2 = new List<int> { 4, 5, 6 };
-            List<int> row3 = new List<int> { 7, 8, 9 };
-            matrixA.Add(row1);
-            matrixA.Add(row2);
-            matrixA.Add(row3);
+            int a = Sum(new List<int>() { 2, 3, 4, 5 });
+            int b = Square(new List<int>() { 2, 3, 4, 5 });
 
-            List<int> Row1 = new List<int> { 10, 20, 30 };
-            List<int> Row2 = new List<int> { 40, 50, 60 };
-            List<int> Row3 = new List<int> { 70, 80, 90 };
-            matrixB.Add(Row1);
-            matrixB.Add(Row2);
-            matrixB.Add(Row3);
+            Console.WriteLine("sum is :" + a);
+            Console.WriteLine("square is :" + b);
 
 
-            for (int i = 0; i < matrixA.Count; i++)
+            List<int> FinalList = new List<int>();
+            FinalList.Add(a);
+            FinalList.Add(b);
+
+            for (int i = 0; i < FinalList.Count; i++)
             {
-                for (int j = 0; j < 3; j++)
-                    Console.Write(matrixA[i][j]);
-                Console.WriteLine();
+                Console.WriteLine(FinalList[i]);
             }
-            Console.WriteLine();
 
-
-            for (int i = 0; i < matrixB.Count; i++)
+            List<int> p = Both(new List<int>() { 2, 3, 4, 5 });
+            for (int i = 0; i < p.Count; i++)
             {
-                for (int j = 0; j < 3; j++)
-                    Console.Write(matrixB[i][j]);
-                Console.WriteLine();
+                Console.WriteLine(p[i]);
             }
-            Console.WriteLine();
 
 
-            for (int i = 0; i < 3; i++)
+            static int Sum(List<int> c)
             {
-                List<int> matrixC = new List<int>();
-                for (int j = 0; j < 3; j++)
+                int sum;
+                sum = 0;
+
+                List<int> num = new List<int> { 2, 3, 4, 5 };
+                for (int i = 0; i < num.Count; i++)
                 {
-                    Console.Write(matrixA[i][j] * matrixB[i][j]);
-                    Console.WriteLine();
-                    matrixC.Add(matrixA[i][j] * matrixB[i][j]);
+
+                    sum = num[i] + sum;
 
                 }
-                Console.WriteLine();
+                return sum;
+            }
+            static int Square(List<int> c)
+            {
+                int square;
+                square = 0;
+
+                List<int> num = new List<int> { 2, 3, 4, 5 };
+                for (int i = 0; i < num.Count; i++)
+                {
+
+                    square = num[i] * num[i] + square;
+
+                }
+                return square;
+            }
+
+            static List<int> Both(List<int> d)
+
+            {
+                List<int> num = new List<int> { 2, 3, 4, 5 };
+                List<int> Blank = new List<int>();
+                int square = 0;
+                int sum = 0;
+                for (int i = 0; i < num.Count; i++)
+
+                {
+                    sum = num[i] + sum;
+                    square = num[i] * num[i] + square;
+                }
+                Blank.Add(sum);
+                Blank.Add(square);
+
+                return Blank;
             }
 
         }
     }
-}
+
+    }
+ 
