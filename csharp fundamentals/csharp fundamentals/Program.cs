@@ -14,43 +14,28 @@ namespace csharp_fundamentals
          Main(string[] args)
         {
             {
-                UserDetail x = UserInformation();
+                int lenght;
+                Console.WriteLine("enter the length");
+                lenght = Convert.ToInt32(Console.ReadLine());
+                int breadth;
+                Console.WriteLine("enter the breadth");
+                breadth = Convert.ToInt32(Console.ReadLine());
+                int c = Rectangle(lenght, breadth);
 
-                Console.WriteLine(x);
+                Console.WriteLine("the area of rectangle is " + c);
             }
 
             // You can define other methods, fields, classes and namespaces here
-            static UserDetail UserInformation()
+            static int Rectangle(int a, int b)
             {
-                string name;
-                int age;
-                string address;
 
-                Console.WriteLine("enter user name");
-                name = Console.ReadLine();
-                Console.WriteLine("enter user age");
-                age = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("enter user address");
-                address = Console.ReadLine();
-
-                UserDetail user = new UserDetail();
-                user.Name = name;
-                user.Age = age;
-                user.Address = address;
-
-                return user;
+                int result;
+                result = a * b;
+                return result;
             }
-        }
-
-        class UserDetail
-        {
-            public string Name;
-            public int Age;
-            public string Address;
 
 
         }
-
     }
 }
  
