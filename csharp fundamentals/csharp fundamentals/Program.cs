@@ -13,75 +13,26 @@ namespace csharp_fundamentals
         static void
          Main(string[] args)
         {
-            int a = Sum(new List<int>() { 2, 3, 4, 5 });
-            int b = Square(new List<int>() { 2, 3, 4, 5 });
-
-            Console.WriteLine("sum is :" + a);
-            Console.WriteLine("square is :" + b);
-
-
-            List<int> FinalList = new List<int>();
-            FinalList.Add(a);
-            FinalList.Add(b);
-
-            for (int i = 0; i < FinalList.Count; i++)
             {
-                Console.WriteLine(FinalList[i]);
+                int side;
+                Console.WriteLine("enter the side");
+                side = Convert.ToInt32(Console.ReadLine());
+
+                int z = Area(side);
+                Console.WriteLine( "the area of square is " + z);
+
+
             }
 
-            List<int> p = Both(new List<int>() { 2, 3, 4, 5 });
-            for (int i = 0; i < p.Count; i++)
+            // You can define other methods, fields, classes and namespaces here
+
+            static int Area(int side)
             {
-                Console.WriteLine(p[i]);
-            }
 
+                int result;
+                result = 4 * side;
 
-            static int Sum(List<int> c)
-            {
-                int sum;
-                sum = 0;
-
-                List<int> num = new List<int> { 2, 3, 4, 5 };
-                for (int i = 0; i < num.Count; i++)
-                {
-
-                    sum = num[i] + sum;
-
-                }
-                return sum;
-            }
-            static int Square(List<int> c)
-            {
-                int square;
-                square = 0;
-
-                List<int> num = new List<int> { 2, 3, 4, 5 };
-                for (int i = 0; i < num.Count; i++)
-                {
-
-                    square = num[i] * num[i] + square;
-
-                }
-                return square;
-            }
-
-            static List<int> Both(List<int> d)
-
-            {
-                List<int> num = new List<int> { 2, 3, 4, 5 };
-                List<int> Blank = new List<int>();
-                int square = 0;
-                int sum = 0;
-                for (int i = 0; i < num.Count; i++)
-
-                {
-                    sum = num[i] + sum;
-                    square = num[i] * num[i] + square;
-                }
-                Blank.Add(sum);
-                Blank.Add(square);
-
-                return Blank;
+                return result;
             }
 
         }
