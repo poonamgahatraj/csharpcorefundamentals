@@ -14,38 +14,43 @@ namespace csharp_fundamentals
          Main(string[] args)
         {
             {
-                string a = UserDetail();
-                int b = UserDetail1();
-                Console.WriteLine("the user detail is :");
-                Console.WriteLine("the user name is " + a);
-                Console.WriteLine("the user age is " + b);
+                UserDetail x = UserInformation();
 
+                Console.WriteLine(x);
             }
 
             // You can define other methods, fields, classes and namespaces here
-
-             static string UserDetail()
+            static UserDetail UserInformation()
             {
                 string name;
-                Console.WriteLine("enter the user name");
-                name = Console.ReadLine();
-                return name;
-
-            }
-
-             static int UserDetail1()
-            {
-
                 int age;
-                Console.WriteLine("enter the user age");
-                age = Convert.ToInt32(Console.ReadLine());
+                string address;
 
-                return age;
+                Console.WriteLine("enter user name");
+                name = Console.ReadLine();
+                Console.WriteLine("enter user age");
+                age = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter user address");
+                address = Console.ReadLine();
+
+                UserDetail user = new UserDetail();
+                user.Name = name;
+                user.Age = age;
+                user.Address = address;
+
+                return user;
             }
+        }
+
+        class UserDetail
+        {
+            public string Name;
+            public int Age;
+            public string Address;
 
 
         }
-    }
 
     }
+}
  
