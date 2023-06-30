@@ -14,36 +14,32 @@ namespace csharp_fundamentals
          Main(string[] args)
         {
             {
+                {
+                    int num;
+                    bool isPrime = true;
+                    Console.WriteLine("enter the num");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    for (int i = 2; i < num; i++)
+                    {
+                        for (int j = 2; j < num; j++)
+                        {
 
-                Student suraj = new Student();
-                suraj.Name = "suraj gahatraj";
-                suraj.Age = 20;
-                ShowInfo(suraj);
+                            if (i != j && i % j == 0)
+                            {
+                                isPrime = false;
+                                break;
+                            }
 
-            }
+                        }
+                        if (isPrime)
+                        {
+                            Console.Write(i);
+                        }
+                        isPrime = true;
 
-
-
-
-            static void ShowInfo(Student st)
-            {
-                Console.WriteLine("Name is " + st.Name);
-                Console.WriteLine("Age is " + st.Age);
-
-
+                    }
+                }
             }
         }
-
-        // You can define other methods, fields, classes and namespaces here
-
-        class Student
-        {
-            public string Name;
-            public int Age;
-
-        }
-
     }
 }
-
- 
