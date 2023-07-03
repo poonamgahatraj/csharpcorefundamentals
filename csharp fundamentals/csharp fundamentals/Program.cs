@@ -14,32 +14,47 @@ namespace csharp_fundamentals
          Main(string[] args)
         {
             {
+                Student st = new Student();
+                Student st1 = new Student();
+                Student st2 = new Student();
+                Student st3 = new Student();
+                Student st4 = new Student();
+
+                st.firstname = "alex";
+                st.lastname = "hdfd";
+                st1.firstname = "john";
+                st1.lastname = "hegks";
+                st2.firstname = "sam";
+                st2.lastname = "jhdcjsh";
+                st3.firstname = "rachel";
+                st3.lastname = "jsshl";
+                st4.firstname = "joy";
+                st4.lastname = "dhdj";
+
+
+                List<Student> StudentList = new List<Student>();
+                StudentList.Add(st);
+                StudentList.Add(st1);
+                StudentList.Add(st2);
+                StudentList.Add(st3);
+                StudentList.Add(st4);
+
+
+
+                for (int i = 0; i < StudentList.Count; i++)
                 {
-                    int num;
-                    bool isPrime = true;
-                    Console.WriteLine("enter the num");
-                    num = Convert.ToInt32(Console.ReadLine());
-                    for (int i = 2; i < num; i++)
-                    {
-                        for (int j = 2; j < num; j++)
-                        {
-
-                            if (i != j && i % j == 0)
-                            {
-                                isPrime = false;
-                                break;
-                            }
-
-                        }
-                        if (isPrime)
-                        {
-                            Console.Write(i);
-                        }
-                        isPrime = true;
-
-                    }
+                    Console.WriteLine(StudentList[i].firstname);
                 }
             }
         }
+
+// You can define other methods, fields, classes and namespaces here
+public class Student
+        {
+            public string firstname;
+            public string lastname;
+        }
+
     }
 }
+    
