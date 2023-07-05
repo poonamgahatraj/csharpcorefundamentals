@@ -13,29 +13,63 @@ namespace csharp_fundamentals
         static void
          Main(string[] args)
         {
+
+            NumberProblem np = new NumberProblem()
             {
-                Student x = new Student()
+                NumList = new List<int>() { 10, 20, 30, 4, -1, 2, 100, 7 }
+            };
+
+
+            List<int> ans = np.GetMaxGetMin();
+            Console.WriteLine(ans[0]);
+            Console.WriteLine(ans[1]);
+
+        }
+
+
+        // You can define other methods, fields, classes and namespaces here
+
+        public class NumberProblem
+        {
+            public List<int> NumList { get; set; }
+
+            public NumberProblem()
+            {
+                NumList = new List<int>();
+            }
+
+            public List<int> GetMaxGetMin()
+            {
+                int getmax;
+                int getmin;
+                List<int> result = new List<int>();
+                getmax = NumList[0];
+                getmin = NumList[0];
+
+                for (int i = 0; i < NumList.Count; i++)
                 {
-                    Name = "Sam",
-                    Age = 23,
+                    if (NumList[i] > getmax)
+                    {
+                        getmax = NumList[i];
+                    }
 
-                };
 
-                Console.WriteLine("Name of the Student is " + x.Name);
-                Console.WriteLine("Age of the Student is " + x.Age);
+                    if (NumList[i] < getmin)
+                    {
+                        getmin = NumList[i];
+                    }
+                }
+
+                result.Add(getmax);
+                result.Add(getmin);
+
+                return result;
+
+
 
 
             }
-        }
 
-// You can define other methods, fields, classes and namespaces here
-
-public class Student
-
-        {
-
-            public string Name { get; set; }
-            public int Age { get; set; }
 
         }
     }
