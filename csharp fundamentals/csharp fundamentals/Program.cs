@@ -13,60 +13,99 @@ namespace csharp_fundamentals
         static void
          Main(string[] args)
         {
-
-            NumberProblem np = new NumberProblem()
+            Bank b = new Bank()
             {
-                NumList = new List<int>() { 10, 20, 30, 4, -1, 2, 100, 7 }
+
+                FirstName = "Sam",
+                InitialDeposit = 1000
             };
 
+            Console.WriteLine("username is" + b.FirstName);
+            Console.WriteLine(b.FirstName + "initial balance is " + b.InitialDeposit);
 
-            List<int> ans = np.GetMaxGetMin();
-            Console.WriteLine(ans[0]);
-            Console.WriteLine(ans[1]);
+            b.Withdraw();
+
+            int y = b.Save();
+            Console.WriteLine(y);
+
+            int z = b.Deposit();
+            Console.WriteLine(z);
+
+            b.GetUserInformation();
 
         }
 
-
         // You can define other methods, fields, classes and namespaces here
 
-        public class NumberProblem
+        public class Bank
         {
-            public List<int> NumList { get; set; }
 
-            public NumberProblem()
+            public string FirstName { get; set; }
+            public int InitialDeposit { get; set; }
+
+            public void Withdraw()
             {
-                NumList = new List<int>();
-            }
-
-            public List<int> GetMaxGetMin()
-            {
-                int getmax;
-                int getmin;
-                List<int> result = new List<int>();
-                getmax = NumList[0];
-                getmin = NumList[0];
-
-                for (int i = 0; i < NumList.Count; i++)
+                int Withdraw;
+                Console.WriteLine("Enter the amount you want to withdraw");
+                Withdraw = Convert.ToInt32(Console.ReadLine());
+                if (Withdraw <= InitialDeposit)
                 {
-                    if (NumList[i] > getmax)
-                    {
-                        getmax = NumList[i];
-                    }
 
-
-                    if (NumList[i] < getmin)
-                    {
-                        getmin = NumList[i];
-                    }
+                    Console.WriteLine("you can Withdraw the amount");
                 }
 
-                result.Add(getmax);
-                result.Add(getmin);
+                if (Withdraw > InitialDeposit)
+                {
 
-                return result;
+                    Console.WriteLine("Insufficient balance");
+
+                }
+
+            }
 
 
 
+            public int Save()
+            {
+                int save;
+                Console.WriteLine("Enter the amount you want to save");
+                save = Convert.ToInt32(Console.ReadLine());
+                save = InitialDeposit + save;
+                {
+
+                    Console.WriteLine("Your Current balance is " + save);
+
+                }
+
+                return save;
+            }
+
+
+
+
+            public int Deposit()
+
+            {
+                int deposit;
+                Console.WriteLine("Enter the amount you want to deposit");
+                deposit = Convert.ToInt32(Console.ReadLine());
+
+                deposit = InitialDeposit + deposit;
+                {
+
+                    Console.WriteLine("now your current balance is " + deposit);
+                }
+
+                return deposit;
+
+            }
+
+            public void GetUserInformation()
+
+            {
+                Console.WriteLine("UserName is " + " " + FirstName);
+
+                Console.WriteLine(FirstName + "Total Deposit is " + " " + InitialDeposit);
 
             }
 
@@ -74,3 +113,6 @@ namespace csharp_fundamentals
         }
     }
 }
+
+
+        
