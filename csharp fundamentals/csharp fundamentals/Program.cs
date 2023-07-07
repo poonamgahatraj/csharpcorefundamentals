@@ -13,101 +13,40 @@ namespace csharp_fundamentals
         static void
          Main(string[] args)
         {
-            Bank b = new Bank()
             {
+                UserDetail x = UserInformation();
 
-                FirstName = "Sam",
-                InitialDeposit = 1000
-            };
+                Console.WriteLine(x);
+            }
 
-            Console.WriteLine("username is" + b.FirstName);
-            Console.WriteLine(b.FirstName + "initial balance is " + b.InitialDeposit);
+            // You can define other methods, fields, classes and namespaces here
+             static UserDetail UserInformation()
+            {
+                string name;
+                int age;
+                string address;
 
-            b.Withdraw();
+                Console.WriteLine("enter user name");
+                name = Console.ReadLine();
+                Console.WriteLine("enter user age");
+                age = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter user address");
+                address = Console.ReadLine();
 
-            int y = b.Save();
-            Console.WriteLine(y);
+                UserDetail user = new UserDetail();
+                user.Name = name;
+                user.Age = age;
+                user.Address = address;
 
-            int z = b.Deposit();
-            Console.WriteLine(z);
-
-            b.GetUserInformation();
-
+                return user;
+            }
         }
 
-        // You can define other methods, fields, classes and namespaces here
-
-        public class Bank
+        public class UserDetail
         {
-
-            public string FirstName { get; set; }
-            public int InitialDeposit { get; set; }
-
-            public void Withdraw()
-            {
-                int Withdraw;
-                Console.WriteLine("Enter the amount you want to withdraw");
-                Withdraw = Convert.ToInt32(Console.ReadLine());
-                if (Withdraw <= InitialDeposit)
-                {
-
-                    Console.WriteLine("you can Withdraw the amount");
-                }
-
-                if (Withdraw > InitialDeposit)
-                {
-
-                    Console.WriteLine("Insufficient balance");
-
-                }
-
-            }
-
-
-
-            public int Save()
-            {
-                int save;
-                Console.WriteLine("Enter the amount you want to save");
-                save = Convert.ToInt32(Console.ReadLine());
-                save = InitialDeposit + save;
-                {
-
-                    Console.WriteLine("Your Current balance is " + save);
-
-                }
-
-                return save;
-            }
-
-
-
-
-            public int Deposit()
-
-            {
-                int deposit;
-                Console.WriteLine("Enter the amount you want to deposit");
-                deposit = Convert.ToInt32(Console.ReadLine());
-
-                deposit = InitialDeposit + deposit;
-                {
-
-                    Console.WriteLine("now your current balance is " + deposit);
-                }
-
-                return deposit;
-
-            }
-
-            public void GetUserInformation()
-
-            {
-                Console.WriteLine("UserName is " + " " + FirstName);
-
-                Console.WriteLine(FirstName + "Total Deposit is " + " " + InitialDeposit);
-
-            }
+            public string Name;
+            public int Age;
+            public string Address;
 
 
         }
@@ -115,4 +54,4 @@ namespace csharp_fundamentals
 }
 
 
-        
+
